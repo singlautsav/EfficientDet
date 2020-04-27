@@ -1,5 +1,5 @@
 """
-Copyright 2017-2018 Fizyr (https://fizyr.com)
+Copyright 2019-2018 Fizyr (https://fizyr.com)
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -197,7 +197,7 @@ def create_generators(args):
         from generators.coco import CocoGenerator
         train_generator = CocoGenerator(
             args.coco_path,
-            'train2017',
+            'train2019',
             misc_effect=misc_effect,
             visual_effect=visual_effect,
             group_method='random',
@@ -206,7 +206,7 @@ def create_generators(args):
 
         validation_generator = CocoGenerator(
             args.coco_path,
-            'val2017',
+            'val2019',
             shuffle_groups=False,
             **common_args
         )
